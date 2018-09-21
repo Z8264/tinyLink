@@ -1,27 +1,114 @@
-ul {
-  padding: 0;
-  width: 33.33%;
+.main {
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section.column {
+  width: 33.333%;
+  float: left;
+  padding: 20px;
+  border-right: 1px dashed #ddd;
+}
+
+.link {
+  margin: 0 0 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-li {
-  width: 100%;
-  border-bottom: 1px dashed #ddd;
-}
-li:last-child{
-  border:none;
-}
-li a {
-  display: block;
-  padding: 0 20px;
-  font-size: 18px;
-  line-height: 50px;
-  color: #333;
-  
-  .url {
-    font-size:14px;
-    color:#666;
+  &-head {
+    position: relative;
+    border-bottom: 1px dashed #f1f1f1;
+    h2 {
+      overflow: hidden;
+      padding: 0 20px;
+      height: 50px;
+      font-size: 18px;
+      line-height: 50px;
+    }
+    a {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      line-height: 50px;
+    }
   }
-  &:hover{
-    background:#f1f1f1;
+  &-foot {
+    height: 44px;
+    border-top: 1px dashed #f1f1f1;
+  }
+}
+
+.layout-list {
+  .link-list {
+    li {
+      a {
+        position: relative;
+        display: block;
+        padding: 1px;
+        height: 50px;
+        line-height: 50px;
+        transition: all ease-out 0.3s;
+        .name {
+          padding-left: 60px;
+          font-size: 16px;
+          line-height: 50px;
+          color: #333;
+        }
+        .icon {
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 30px;
+          height: 30px;
+          background: #def;
+        }
+        .url {
+          font-size: 12px;
+          color: #666;
+        }
+      }
+      a:hover {
+        background: #f1f1f1;
+      }
+    }
+  }
+}
+
+.layout-gird {
+  .link-head {
+    border-bottom: 1px dashed #f1f1f1;
+  }
+  .link-list {
+    li {
+      float: left;
+      width: 33.33%;
+      a {
+        position: relative;
+        display: block;
+        padding: 20px 0 10px;
+        background: #fff;
+        transition: all ease-out 0.3s;
+        .name {
+          display: block;
+          padding-top: 5px;
+          font-size: 12px;
+          line-height: 20px;
+          color: #333;
+          text-align: center;
+        }
+        .icon {
+          display: block;
+          margin: 0 auto;
+          width: 60px;
+          height: 60px;
+          background: #def;
+        }
+        .url {
+          display: none;
+        }
+      }
+      a:hover {
+        background: #f1f1f1;
+      }
+    }
   }
 }

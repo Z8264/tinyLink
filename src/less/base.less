@@ -10,6 +10,7 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 body {
   font-family: "微软雅黑";
@@ -36,4 +37,10 @@ table {
 }
 a {
   text-decoration: none;
+}
+
+.clearfix:after{
+    content:'';
+    display:table;
+    clear:both;
 }
